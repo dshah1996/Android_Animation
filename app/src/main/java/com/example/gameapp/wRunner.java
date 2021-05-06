@@ -24,6 +24,7 @@ public class wRunner extends View {
     //handler object allow to schedule runnable
     Handler handler;
     final long In_Millis = 25;
+    
 
 
     public wRunner(Context context) {
