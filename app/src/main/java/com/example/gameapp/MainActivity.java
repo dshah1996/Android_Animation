@@ -7,10 +7,12 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
     Button exitbtn;
+    public static final String TAG = "message";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     }
         public void openActivity2(){
             Intent intent = new Intent(this, Activity2.class);
+            EditText player1 = findViewById(R.id.player1);
+            String players = " Welcome" +player1.getText().toString();
+            intent.putExtra(TAG,players);
             startActivity(intent);
         }
 

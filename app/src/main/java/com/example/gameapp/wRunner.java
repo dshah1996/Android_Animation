@@ -9,12 +9,14 @@ import android.graphics.Point;
 import android.os.Handler;
 import android.view.Display;
 import android.view.View;
+import android.widget.TextView;
 
 public class wRunner extends View {
 
     //Bitmap object
     Bitmap sky_far, sky_close, highway, vehicle;
     int Width, Height, nwidth, nheight;
+
 
     int vanX, vanY, vanFrame = 0;
     int sky_farX = 0, sky_closeX = 0, highwayX = 0, vehicleX,vehicleY;
@@ -24,7 +26,7 @@ public class wRunner extends View {
     //handler object allow to schedule runnable
     Handler handler;
     final long In_Millis = 25;
-    
+
 
 
     public wRunner(Context context) {
