@@ -21,7 +21,7 @@ public class wRunner extends View {
     int vanX, vanY, vanFrame = 0;
     int sky_farX = 0, sky_closeX = 0, highwayX = 0, vehicleX,vehicleY;
     //Array type to hold multiple image
-    Bitmap van[] = new Bitmap[13];
+    Bitmap sonic[] = new Bitmap[13];
     Runnable runnable;
     //handler object allow to schedule runnable
     Handler handler;
@@ -35,19 +35,19 @@ public class wRunner extends View {
         sky_close = BitmapFactory.decodeResource(getResources(),R.drawable.skyline_close);
         sky_far = BitmapFactory.decodeResource(getResources(),R.drawable.skyline_far);
         vehicle = BitmapFactory.decodeResource(getResources(),R.drawable.owl);
-        van[0] = BitmapFactory.decodeResource(getResources(),R.drawable.img1);
-        van[1] = BitmapFactory.decodeResource(getResources(),R.drawable.img1);
-        van[2] = BitmapFactory.decodeResource(getResources(),R.drawable.img2);
-        van[3] = BitmapFactory.decodeResource(getResources(),R.drawable.img2);
-        van[4] = BitmapFactory.decodeResource(getResources(),R.drawable.img3);
-        van[5] = BitmapFactory.decodeResource(getResources(),R.drawable.img3);
-        van[6] = BitmapFactory.decodeResource(getResources(),R.drawable.img4);
-        van[7] = BitmapFactory.decodeResource(getResources(),R.drawable.img4);
-        van[8] = BitmapFactory.decodeResource(getResources(),R.drawable.img5);
-        van[9] = BitmapFactory.decodeResource(getResources(),R.drawable.img5);
-        van[10] = BitmapFactory.decodeResource(getResources(),R.drawable.img6);
-        van[11] = BitmapFactory.decodeResource(getResources(),R.drawable.img7);
-        van[12] = BitmapFactory.decodeResource(getResources(),R.drawable.img7);
+        sonic[0] = BitmapFactory.decodeResource(getResources(),R.drawable.img1);
+        sonic[1] = BitmapFactory.decodeResource(getResources(),R.drawable.img1);
+        sonic[2] = BitmapFactory.decodeResource(getResources(),R.drawable.img2);
+        sonic[3] = BitmapFactory.decodeResource(getResources(),R.drawable.img2);
+        sonic[4] = BitmapFactory.decodeResource(getResources(),R.drawable.img3);
+        sonic[5] = BitmapFactory.decodeResource(getResources(),R.drawable.img3);
+        sonic[6] = BitmapFactory.decodeResource(getResources(),R.drawable.img4);
+        sonic[7] = BitmapFactory.decodeResource(getResources(),R.drawable.img4);
+        sonic[8] = BitmapFactory.decodeResource(getResources(),R.drawable.img5);
+        sonic[9] = BitmapFactory.decodeResource(getResources(),R.drawable.img5);
+        sonic[10] = BitmapFactory.decodeResource(getResources(),R.drawable.img6);
+        sonic[11] = BitmapFactory.decodeResource(getResources(),R.drawable.img7);
+        sonic[12] = BitmapFactory.decodeResource(getResources(),R.drawable.img7);
 
         //screen height and width
         Display display =((Activity) getContext()).getWindowManager().getDefaultDisplay();
@@ -129,7 +129,7 @@ public class wRunner extends View {
         vanFrame++;
         if(vanFrame == 12)
             vanFrame = 0;
-        canvas.drawBitmap(van[vanFrame],vanX,vanY,null);
+        canvas.drawBitmap(sonic[vanFrame],vanX,vanY,null);
 
         //run method execute after 25 milliseconds
         handler.postDelayed(runnable,In_Millis);
